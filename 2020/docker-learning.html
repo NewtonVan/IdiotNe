@@ -1,0 +1,1477 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+
+<head>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+    <meta name="keywords" content="Docker Learning, IdiotNe">
+    <meta name="description" content="Geek Zen">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>Docker Learning | IdiotNe</title>
+    <link rel="icon" type="image/png" href="/glider.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+
+
+
+
+<body>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/spider.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">IdiotNe</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>Home</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>Tags</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>Categories</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>Archives</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>About</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>Friends</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="Search" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/spider.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">IdiotNe</div>
+        <div class="logo-desc">
+            
+            Geek Zen
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			Home
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			Tags
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			Categories
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			Archives
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			About
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			Friends
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">Docker Learning</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                          <div class="article-tag">
+                            <span class="chip bg-color">No tag</span>
+                          </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
+                    2020-09-17
+                </div>
+                
+
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
+                    2.7k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
+                    16 Min
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>Read Count:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="preview">Preview</h1>
+<hr />
+<p>This semester, I was going to do some project such as machine
+learning, MIT 6.828 course, on my Raspberry Pi. So, I obsessed to learn
+the using of docker.</p>
+<p>This blog continues to be updated.</p>
+<h1 id="basic-ideas">Basic Ideas</h1>
+<hr />
+<p>Raspberry pi 4 is based on <strong>ARM</strong> architecture, and
+Docker CE not only support <strong>x86_64</strong>, but also
+<strong>ARM</strong>. So to suit for docker CE, your raspberry pi's OS
+should be <strong>Raspberry Pi OS Buster</strong></p>
+<p>There are two different ways to install docker on your PC.</p>
+<h1 id="installation">Installation</h1>
+<hr />
+<p>Thanks for <a
+target="_blank" rel="noopener" href="https://yeasy.gitbook.io/docker_practice/install/raspberry-pi">this
+blog</a>, most of the installation part of Docker on Raspberry pi is
+based on this blog.</p>
+<h2 id="using-shell-script">Using Shell Script</h2>
+<hr />
+<p>Actually, for the guys like me, just for learning docker and
+blahblahblah, I highly recommended you to use this method, maybe after
+plenty of experience of docker, you can use <strong>apt</strong> method
+which will be introduced next chapter.</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">$ curl -fsSL get.docker.com -o get-docker.sh &amp;&amp; sudo sh get-docker.sh --mirror Aliyun<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>The option <em>mirror</em> will determine whether to use mirror
+source to speed up the downloading process. Because some country may
+have some problem on connecting with its official website.</p>
+<h2 id="apt-method">Apt method</h2>
+<hr />
+<p>First step, adding some packages using HTTPS and CA certification</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">$ sudo apt-get update
+
+$ sudo apt-get install \
+     apt-transport-https \
+     ca-certificates \
+     curl \
+     gnupg2 \
+     lsb-release \
+     software-properties-common<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>Now, to confirm the legality of the software you wanna download, add
+GPG key</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">$ curl -fsSL https:&#x2F;&#x2F;mirrors.ustc.edu.cn&#x2F;docker-ce&#x2F;linux&#x2F;raspbian&#x2F;gpg | sudo apt-key add -
+
+
+# official
+# $ curl -fsSL https:&#x2F;&#x2F;download.docker.com&#x2F;linux&#x2F;raspbian&#x2F;gpg | sudo apt-key add -<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>Now, we need to add the source of Docker CE software:</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">$ sudo add-apt-repository \
+    &quot;deb [arch&#x3D;armhf] https:&#x2F;&#x2F;mirrors.ustc.edu.cn&#x2F;docker-ce&#x2F;linux&#x2F;raspbian \
+    $(lsb_release -cs) \
+    stable&quot;
+
+
+# official
+# $ sudo add-apt-repository \
+#    &quot;deb [arch&#x3D;armhf] https:&#x2F;&#x2F;download.docker.com&#x2F;linux&#x2F;raspbian \
+#    $(lsb_release -cs) \
+#    stable&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>Ensure you have accomplish the step 1, otherwise you may not use
+<code>add-apt-repository</code></p>
+<p>The last step, load the elephant into the refrigerator.</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">$ sudo apt-get update
+
+$ sudo apt-get install docker-ce<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h1 id="launch-the-docker">Launch the Docker</h1>
+<hr />
+<p>If you OS use <code>systemd</code>(actually the system that blog
+recommended is using <code>systemd</code>), run this command</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">$ sudo systemctl enable docker
+$ sudo systemctl start docker<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>Now, we gonna create a group named <code>docker</code> , and add your
+current user into docker so that without becoming <code>root</code> user
+can you use docker.</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">$ sudo groupadd docker
+$ sudo usermod -aG docker $USER
+# For instance, maybe you are still login your raspberry pi as user, normally, pi, you can use pi to replace &#96;$USER&#96;: &#96;sudo usermod -aG docker pi&#96;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h2 id="test-the-installation">Test The Installation</h2>
+<hr />
+<p>Try this:</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">$ docker run arm32v7&#x2F;hello-world
+
+Unable to find image &#39;hello-world:latest&#39; locally
+latest: Pulling from library&#x2F;hello-world
+d1725b59e92d: Pull complete
+Digest: sha256:0add3ace90ecb4adbf7777e9aacf18357296e799f81cabc9fde470971e499788
+Status: Downloaded newer image for hello-world:latest
+
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the &quot;hello-world&quot; image from the Docker Hub.
+    (amd64)
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+ $ docker run -it ubuntu bash
+
+Share images, automate workflows, and more with a free Docker ID:
+ https:&#x2F;&#x2F;hub.docker.com&#x2F;
+
+For more examples and ideas, visit:
+ https:&#x2F;&#x2F;docs.docker.com&#x2F;get-started&#x2F;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>Maybe you will meet with this situation, which is the situation I've
+met at the first installation:</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">Docker: Error response from daemon: failed to create endpoint on network bridge: failed to add blahblahblah....<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>Try to reboot your raspberry ;). Maybe it also works for you.</p>
+<h2 id="speed-up">Speed Up</h2>
+<hr />
+<p>As I've mentioned, many country may have some problem with contacting
+with the hub of docker. For linux using <code>systemd</code>, such as
+Ubuntu 16.04+、Debian 8+、CentOS 7.</p>
+<p>Find <code>/etc/docker/daemon.json</code> (if this file doesn't
+exist, create it), and adding the contents like this:</p>
+<pre class="line-numbers language-json" data-language="json"><code class="language-json"><span class="token punctuation">&#123;</span>
+  <span class="token property">"registry-mirrors"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token string">"https://hub-mirror.c.163.com"</span><span class="token punctuation">,</span>
+    <span class="token string">"https://mirror.baidubce.com"</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>Always remember this must be strictly satisfy with the
+<code>json</code> format.</p>
+<p>Then restart the service:</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">$ sudo systemctl daemon-reload
+$ sudo systemctl restart docker<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h1 id="basic-usage">Basic Usage</h1>
+<hr />
+<p>About the usage tutorial of docker, there is no doubt that the
+official docs are the best choice. And for most people who just try to
+use some frequently used docker command, I highly recommend <a
+target="_blank" rel="noopener" href="https://yeasy.gitbook.io/docker_practice/install/raspberry-pi">this
+blog</a> which I've mentioned before.</p>
+<h2 id="basic-idea">Basic Idea</h2>
+<hr />
+<p>There are some basic concepts of docker, such as image, container and
+repository. And just keep in mind the following points will just be
+fine. To explore more, you can read the blog I recommend and search in
+the docs.</p>
+<ul>
+<li><p>Always keep in mind, the more specifically usage of the command
+can be learnt from docs or <code>--help</code></p></li>
+<li><p>The image is composed by a set of files which are organized by
+hierarchy architecture.</p></li>
+<li><p>The changes you've done on container will just be record into the
+current storage file.</p></li>
+<li><p>It's funny that docker actually working in a C/S mode. That
+create a <strong>context</strong> concept. The process of creating your
+own image will be done on docker's <strong>'server'</strong>, and the
+range of files that you can manipulate is determined by the
+<strong>context</strong>. More specifically, only the files under the
+<strong>context</strong> directory.</p></li>
+<li><p>To save the space, docker rely on the mechanism which the file is
+multi-used.</p></li>
+</ul>
+<h2 id="basic-image-operation">Basic Image Operation</h2>
+<hr />
+<ul>
+<li>Get the image: <code>docker pull [opts]
+RepositoryName[:tag]</code></li>
+<li>list the image: <code>docker image ls [opts]
+[repository[:tag]]</code>
+<ul>
+<li><code>-f</code>(also named <code>--filter</code>) is quite useful,
+according to that blog.</li>
+<li>The combination of <code>-f</code> and <code>-q</code> will just the
+ID of the dockers that you wanna remove.</li>
+</ul></li>
+<li>remove the image: <code>docker image rm [opts]  &lt;Image id
+list&gt;</code> or <code>docker rmi [opts] &lt;Image id list&gt;</code>
+<ul>
+<li>Remember that, you can only remove the certain image when there is
+no other container is based on it.</li>
+<li>The things really happens when we run the remove commands, is well
+interpreted in the blog. Broadly speaking, it has <em>untagged</em>
+process and <em>Deleted</em> process.</li>
+<li><code>docker container prune</code>: this will remove all the unused
+images.</li>
+</ul></li>
+</ul>
+<h2 id="container-operation">Container Operation</h2>
+<hr />
+<h3 id="running-docker">Running Docker</h3>
+<hr />
+<ul>
+<li>command format: <code>docker run [opts] repository:tag [CMD]</code>
+<ul>
+<li><code>[CMD]</code> represent the first command executed by docker
+when you first create a brand new docker. Otherwise, without this, it
+will be determined by docker file</li>
+</ul></li>
+<li><code>-i</code>: Interactive mode, keep container's stdin open</li>
+<li><code>-t</code>: Dispatch a pseudo-tty binding with stdin</li>
+<li><code>--rm</code>: Once you stop the container, it will be removed
+automatically.</li>
+<li><code>-d</code>: Docker will execute its command at background. You
+can check the output by <code>docker container logs</code></li>
+</ul>
+<h3 id="start-restart-and-stop">Start, Restart and Stop</h3>
+<hr />
+<ul>
+<li><code>docker container stop</code>: Stop the container. In the
+interactive mode, you can also achieve this by <code>exit</code> or
+<kbd>ctrl</kbd>+<kbd>d</kbd></li>
+<li><code>docker restart</code>: used to stop the container that is
+running and restart it</li>
+<li><code>docker start</code>: start the container which is in the
+terminate mode</li>
+</ul>
+<h3 id="enter-the-container">Enter the Container</h3>
+<hr />
+<p>This is aimed to handle the container which is running with
+<code>-d</code>, there are two commands: <code>attach</code> and
+<code>exec</code></p>
+<ul>
+<li><code>docker attach</code>: If you use <code>exit</code>, the
+container will stop</li>
+<li><code>docker exec [OPOTIONS] CONTAINER COMMAND [ARG]</code>: Can be
+followed by <code>-i</code>, <code>-t</code>. When you exit, the
+container will not stop.</li>
+</ul>
+<h3 id="remove">Remove</h3>
+<hr />
+<ul>
+<li><code>docker container rm</code>: Remove a container which is in the
+terminate mode
+<ul>
+<li><code>-f</code>: with this options, you can remove a container in
+the running mode</li>
+</ul></li>
+<li><code>docker prune</code>: Remove all the containers that is in the
+terminate mode</li>
+</ul>
+<h3 id="commit">Commit</h3>
+<p>Actually, you can create your own image in this way. However, it's
+not a recommended method. Because of hierarchy architecture that I've
+mentioned before, this will cause unnecessary redundant on
+<strong>image</strong>, such as you can't predict what will really
+happen when you use remove commands to build your image. It's also
+troublesome that it is really hard to maintain because it's hard to
+assure what happened about this new image. What's more, the logical
+design of this way can't be explained in an explicit way.</p>
+<p>However, just like what said in the reference blog, use commit we can
+easily comprehend the mechanism about how <strong>dockerfile</strong>
+create your own image and what will happen when docker is creating an
+image refer to <strong>dockerfile</strong>.</p>
+<p>Firstly, you create a container use the image that you already have.
+Do some operation on it and make some change. You can check the
+difference caused by your operation by <code>docker diff</code>.</p>
+<p>Then the leading actor of this section <code>commit</code> will show
+us its function.</p>
+<p><code>docker commit [opt] &lt;container's ID or name&gt; [repository
+name[: tag]]</code></p>
+<p>Use the container modified by you to create a new image which is
+especially identified by <code>[repository name[: tag]]</code>.</p>
+<p>You can use <code>docker history</code> to see the logs recording the
+process of creating this image. Actually, it also shows the layers which
+compose this image. When you try to use this image to create a new
+container and run it, you will feel that it seems that you've already
+done the operation, which you've done on the original operation before,
+on this container too.</p>
+<h2 id="dockerfile">Dockerfile</h2>
+<hr />
+<p>Using <strong>Dockerfile</strong> is more formal way to build an
+image. Suppose we've already finish a Dockerfile. How to best use it to
+create a demo image?</p>
+<p>The answer is <code>docker build</code>, we can use this command to
+build an image from a Dockerfile. Usage: <code>docker build [OPTIONS]
+PATH | URL | -</code> .</p>
+<p>Default Dockerfile path this command utilize to built an image is the
+current working directory. You can also point out the path for docker
+with option <code>-f</code>.</p>
+<p><code>-t</code> is also a useful option, you can name and choose a
+tag in the <code>repository name:tag</code> format.</p>
+<p>More details can be checked by <code>--help</code>. Let's focus on
+something that is more challenging about this process.</p>
+<h3 id="context">Context</h3>
+<hr />
+<p>As I've mentioned before, context is an important concept when we
+building a new image. Because docker use <code>client-server</code>
+structure to achieve the task. So the first job when docker is creating
+a new image is confirm the content of context on the docker's server.
+More specifically, docker's client will copy all the files under the
+<code>PATH</code> you've sent to the docker's server. After that,
+docker's server will set it as "working directory".</p>
+<p>All the local materials that you need to create a new image should be
+under that <code>PATH</code>. For example, maybe in your Dockerfile,
+there exists some instruction such as <code>COPY</code>,
+<code>ADD</code>, which are using local files to create your docker's
+image. Then, those file should be contained under the <code>PATH</code>
+you give.</p>
+<h3 id="syntax-of-dockerfiles-basic-instruction">Syntax Of Dockerfile's
+Basic Instruction</h3>
+<hr />
+<ul>
+<li>Rule of thumb: One instruction will build one layer. It's the
+guideline of building current layer.</li>
+<li><code>FROM</code>: This point out the basic image we used for
+docker.
+<ul>
+<li>There are plenty of high-quality official images on dockerhub.</li>
+<li>For server's image: <code>nginx, redis, mongo, mysql, httpd</code>
+and etc</li>
+<li>More basic, you can also choose those OS image: <code>ubuntu,
+debian, centos</code></li>
+<li>A special image <code>scratch</code>: actually, <code>From
+scratch</code> doesn't set any image as a base, this is a virtual
+concept which represent no image base.</li>
+</ul></li>
+<li><code>RUN</code>: One of the most common used commands, it will
+automatically run the commands after it during the creating image
+process.
+<ul>
+<li>There are two format: <em>shell</em> format and <em>exec</em>
+format</li>
+<li><em>shell</em> format: <code>RUN &lt;commands&gt;</code></li>
+<li><em>exec</em> format: <code>RUN ["EXEC FILE", "OPT1", "OPT2",
+...]</code>, it looks like you're using a function.</li>
+<li>Like I've mentioned in rule of thumb, one instruction is correspond
+to a layer. You need to think really carefully what commands should be
+added after the <code>RUN</code>. Using <code>&amp;&amp;</code>,
+<code>||</code> , <code>;</code> and <code>\</code> , which is based on
+the syntax feature of shell commands, is a good strategy to organize the
+commands used to build image.</li>
+<li><code>#</code> at the head of line is used to take notes.</li>
+</ul></li>
+<li><code>WORKDIR</code>: Appoint the working directory. The operation
+contained by instructions, which are after <code>WORKDIR</code>
+instruction, will work at the working directory appointed by
+<code>WORKDIR</code>.
+<ul>
+<li><a
+target="_blank" rel="noopener" href="https://yeasy.gitbook.io/docker_practice/image/dockerfile/workdir">Reference
+Blogs</a> points out an interesting fact by an example of improper using
+. Like I've said, every instruction will create a container, complete
+the operations, commit it and add it as a new layer. So when you use
+next instruction, the working directory has nothing to do with the final
+working directory in the former container created by previous
+instruction. It will only be initialized by <code>WORKDIR</code>.</li>
+<li>If <code>WORKDIR</code> use relative path to set the later working
+directory, the path it switched is related to the previous
+<code>WORKDIR</code>.</li>
+</ul></li>
+<li><code>CMD</code>:</li>
+</ul>
+<h3 id="example">Example</h3>
+<hr />
+<p>Here is an example. My original reason of learning docker is try to
+learn MIT 6.828 course. I wanna run this lab on my docker. So I created
+a dockerfile:</p>
+<pre class="line-numbers language-dockerfile" data-language="dockerfile"><code class="language-dockerfile">FROM ubuntu:16.04
+
+RUN cp &#x2F;etc&#x2F;apt&#x2F;sources.list &#x2F;etc&#x2F;apt&#x2F;sources.list.bak  \
+    &amp;&amp; cat &lt;&lt; _EOF_ &gt;&gt; &#x2F;etc&#x2F;apt&#x2F;sources.list
+# My Source
+# TsingHua
+deb https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;ubuntu&#x2F; xenial main restricted universe multiverse
+deb-src https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;ubuntu&#x2F; xenial main restricted universe multiverse
+deb https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;ubuntu&#x2F; xenial-updates main restricted universe multiverse
+deb-src https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;ubuntu&#x2F; xenial-updates main restricted universe multiverse
+deb https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;ubuntu&#x2F; xenial-backports main restricted universe multiverse
+deb-src https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;ubuntu&#x2F; xenial-backports main restricted universe multiverse
+deb https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;ubuntu&#x2F; xenial-security main restricted universe multiverse
+deb-src https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;ubuntu&#x2F; xenial-security main restricted universe multiverse
+
+# Ali
+deb http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; xenial main restricted universe multiverse
+deb http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; xenial-security main restricted universe multiverse
+deb http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; xenial-updates main restricted universe multiverse
+deb http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; xenial-proposed main restricted universe multiverse
+deb http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; xenial-backports main restricted universe multiverse
+deb-src http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; xenial main restricted universe multiverse
+deb-src http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; xenial-security main restricted universe multiverse
+deb-src http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; xenial-updates main restricted universe multiverse
+deb-src http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; xenial-proposed main restricted universe multiverse
+deb-src http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; xenial-backports main restricted universe multiverse
+_EOF_
+RUN apt-get update \
+    &amp;&amp; apt-get --no-install-recommends install -y gcc make build-essential gdb gcc-multilib zlib1g-dev libglib2.0-dev libpixman-1-dev
+RUN apt-get install -y git \
+    &amp;&amp; git clone https:&#x2F;&#x2F;github.com&#x2F;mit-pdos&#x2F;6.828-qemu.git qemu \
+    &amp;&amp; git clone https:&#x2F;&#x2F;pdos.csail.mit.edu&#x2F;6.828&#x2F;2018&#x2F;jos.git mit_lab_os \
+    &amp;&amp; apt-get remove -y git
+RUN cd qemu \
+    &amp;&amp; .&#x2F;configure --disable-kvm --target-list&#x3D;&quot;i386-softmmu x86_64-softmmu&quot; \
+    &amp;&amp; make \
+    &amp;&amp; make install \
+    &amp;&amp; cd .. \
+    &amp;&amp; rm -rf qemu
+
+WORKDIR &quot;&#x2F;mit_lab_os&quot;
+
+CMD [&quot;bash&quot;]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        Author:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Tom.Eureka.Newton</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        Link:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://newtonvan.github.io/2020/docker-learning.html">https://newtonvan.github.io/2020/docker-learning.html</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        Reprint policy:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    All articles in this blog are used except for special statements
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    reprint polocy. If reproduced, please indicate source
+                    <a href="/about" target="_blank">Tom.Eureka.Newton</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>Copied successfully, please follow the reprint policy of this article</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">more</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            <span class="chip bg-color">No tag</span>
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+            <div class="card">
+                <a href="/2020/raspberry-pi-learning.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="Raspberry Pi Learning">
+                        
+                        <span class="card-title">Raspberry Pi Learning</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-09-19
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Raspberry-pi/" class="post-category">
+                                    Raspberry pi
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Tools/">
+                        <span class="chip bg-color">Tools</span>
+                    </a>
+                    
+                    <a href="/tags/Technique/">
+                        <span class="chip bg-color">Technique</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/basic-conda-usage.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="Basic Conda Usage">
+                        
+                        <span class="card-title">Basic Conda Usage</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-07-27
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Programming/" class="post-category">
+                                    Programming
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Tools/">
+                        <span class="chip bg-color">Tools</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + 'From: IdiotNe<br />'
+            + 'Author: Tom.Eureka.Newton<br />'
+            + 'Link: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;TOC</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+<!--  -->
+
+
+
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script>
+    MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']]
+        }
+    };
+</script>
+
+
+    <footer class="page-footer bg-color">
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2019-2022</span>
+            
+            <span id="year">2019</span>
+            <a href="/about" target="_blank">Tom.Eureka.Newton</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">23.9k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/NewtonVan" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:tomeurekanewton@gmail.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=2655410807" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 2655410807" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;Search</span>
+            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+	
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    
+
+</body>
+
+</html>

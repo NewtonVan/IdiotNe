@@ -1,0 +1,1572 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+
+<head>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+    <meta name="keywords" content="MIT 6.828 Lab3, IdiotNe">
+    <meta name="description" content="Geek Zen">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>MIT 6.828 Lab3 | IdiotNe</title>
+    <link rel="icon" type="image/png" href="/glider.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+
+
+
+
+<body>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/spider.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">IdiotNe</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>Home</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>Tags</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>Categories</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>Archives</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>About</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>Friends</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="Search" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/spider.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">IdiotNe</div>
+        <div class="logo-desc">
+            
+            Geek Zen
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			Home
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			Tags
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			Categories
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			Archives
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			About
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			Friends
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">MIT 6.828 Lab3</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/6-828/">
+                                <span class="chip bg-color">6.828</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/OS/" class="post-category">
+                                OS
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
+                    2021-06-03
+                </div>
+                
+
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
+                    3.7k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
+                    23 Min
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>Read Count:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="lab-3-user-environment">Lab 3 User Environment</h1>
+<hr />
+<h2 id="overview">Overview</h2>
+<hr />
+<p><strong>Process</strong> is one of the most important concept in
+operating system. And it helps us manage our program with the guarantee
+in lots of aspects such as security, independency and etc. Naturally,
+operating system divide running state into different modes: user mode
+and kernel mode. And this is what we gonna do in this lab: implement the
+basic kernel facilities required to get a protected user-mode process
+running. We should take a note here that JOS mangle its process as
+"environment"(<em>We introduce the term "environment" instead of the
+traditional term "process" in order to stress the point that JOS
+environments and UNIX processes provide different interfaces, and do not
+provide the same semantics.</em>, quoted from 6.828).</p>
+<p>We will enhance the JOS kernel to set up the data structures to keep
+track of user environments, create a single user environment, load a
+program image into it, and start it running. These data structures helps
+us run our system in perfect order.</p>
+<p>What's more, we will also have the chance to make the JOS kernel
+capable of handling any system calls the user environment makes and
+handling any other exceptions it causes.</p>
+<h2 id="preliminary">Preliminary</h2>
+<hr />
+<h3 id="pcb">PCB</h3>
+<hr />
+<p>CPU only run one process at a time until its end is far beyond our
+demand. Instead, we'll manage our processes running in turn. So it's
+really necessary to have a record for "living" process. There is no
+doubt this job fell to operating system.</p>
+<p>We need to design a data structure for the most key information of
+process. And here is our PCB:</p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token comment">// PCB for JOS</span>
+<span class="token keyword">struct</span> <span class="token class-name">Env</span> <span class="token punctuation">&#123;</span>
+	<span class="token keyword">struct</span> <span class="token class-name">Trapframe</span> env_tf<span class="token punctuation">;</span>	<span class="token comment">// Saved registers</span>
+	<span class="token keyword">struct</span> <span class="token class-name">Env</span> <span class="token operator">*</span>env_link<span class="token punctuation">;</span>		<span class="token comment">// Next free Env</span>
+	<span class="token class-name">envid_t</span> env_id<span class="token punctuation">;</span>			<span class="token comment">// Unique environment identifier</span>
+	<span class="token class-name">envid_t</span> env_parent_id<span class="token punctuation">;</span>		<span class="token comment">// env_id of this env's parent</span>
+	<span class="token keyword">enum</span> <span class="token class-name">EnvType</span> env_type<span class="token punctuation">;</span>		<span class="token comment">// Indicates special system environments</span>
+	<span class="token keyword">unsigned</span> env_status<span class="token punctuation">;</span>		<span class="token comment">// Status of the environment</span>
+	<span class="token class-name">uint32_t</span> env_runs<span class="token punctuation">;</span>		<span class="token comment">// Number of times environment has run</span>
+
+	<span class="token comment">// Address space</span>
+	<span class="token class-name">pde_t</span> <span class="token operator">*</span>env_pgdir<span class="token punctuation">;</span>		<span class="token comment">// Kernel virtual address of page dir</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>And here's what the <code>Env</code> fields are for:</p>
+<blockquote>
+<p><strong>env_tf</strong>:</p>
+<p>This structure, defined in <code>inc/trap.h</code>, holds the saved
+register values for the environment while that environment is
+<em>not</em> running: i.e., when the kernel or a different environment
+is running. The kernel saves these when switching from user to kernel
+mode, so that the environment can later be resumed where it left
+off.</p>
+<p><strong>env_link</strong>:</p>
+<p>This is a link to the next <code>Env</code> on the
+<code>env_free_list</code>. <code>env_free_list</code> points to the
+first free environment on the list.</p>
+<p><strong>env_id</strong>:</p>
+<p>The kernel stores here a value that uniquely identifiers the
+environment currently using this <code>Env</code> structure (i.e., using
+this particular slot in the <code>envs</code> array). After a user
+environment terminates, the kernel may re-allocate the same
+<code>Env</code> structure to a different environment - but the new
+environment will have a different <code>env_id</code> from the old one
+even though the new environment is re-using the same slot in the
+<code>envs</code> array.</p>
+<p><strong>env_parent_id</strong>:</p>
+<p>The kernel stores here the <code>env_id</code> of the environment
+that created this environment. In this way the environments can form a
+“family tree,” which will be useful for making security decisions about
+which environments are allowed to do what to whom.</p>
+<p><strong>env_type</strong>:</p>
+<p>This is used to distinguish special environments. For most
+environments, it will be <code>ENV_TYPE_USER</code>. We'll introduce a
+few more types for special system service environments in later
+labs.</p>
+<p><strong>env_status</strong>:</p>
+<p>This variable holds one of the following values:</p>
+<ul>
+<li><p><code>ENV_FREE</code>:</p>
+<p>Indicates that the <code>Env</code> structure is inactive, and
+therefore on the <code>env_free_list</code>.</p></li>
+<li><p><code>ENV_RUNNABLE</code>:</p>
+<p>Indicates that the <code>Env</code> structure represents an
+environment that is waiting to run on the processor.</p></li>
+<li><p><code>ENV_RUNNING</code>:</p>
+<p>Indicates that the <code>Env</code> structure represents the
+currently running environment.</p></li>
+<li><p><code>ENV_NOT_RUNNABLE</code>:</p>
+<p>Indicates that the <code>Env</code> structure represents a currently
+active environment, but it is not currently ready to run: for example,
+because it is waiting for an interprocess communication (IPC) from
+another environment.</p></li>
+<li><p><code>ENV_DYING</code>:</p>
+<p>Indicates that the <code>Env</code> structure represents a zombie
+environment. A zombie environment will be freed the next time it traps
+to the kernel. We will not use this flag until Lab 4.</p></li>
+</ul>
+<p><strong>env_pgdir</strong>:</p>
+<p>This variable holds the kernel <em>virtual address</em> of this
+environment's page directory.</p>
+</blockquote>
+<p>The data structure <code>Trapframe</code> has been mentioned above
+holds user-mode register state. <strong>Note</strong>: In JOS,
+individual environments do not have their own kernel stacks as processes
+do in xv6. There can be only one JOS environment active in the kernel at
+a time, so JOS needs only a <em>single</em> kernel stack.</p>
+<h3 id="basics-of-protected-control-transfer">Basics of Protected
+Control Transfer</h3>
+<hr />
+<p>Exceptions and interrupts are both "protected control transfers,"
+which cause the processor to switch from user to kernel mode (CPL=0)
+without giving the user-mode code any opportunity to interfere with the
+functioning of the kernel or other environments. In Intel's terminology,
+an <em>interrupt</em> is a protected control transfer that is caused by
+an asynchronous event usually external to the processor, such as
+notification of external device I/O activity. An <em>exception</em>, in
+contrast, is a protected control transfer caused synchronously by the
+currently running code, for example due to a divide by zero or an
+invalid memory access.</p>
+<p>In order to ensure that these protected control transfers are
+actually <em>protected</em>, the processor's interrupt/exception
+mechanism is designed so that the code currently running when the
+interrupt or exception occurs <em>does not get to choose arbitrarily
+where the kernel is entered or how</em>. Instead, the processor ensures
+that the kernel can be entered only under carefully controlled
+conditions. On the x86, two mechanisms work together to provide this
+protection:</p>
+<ol type="1">
+<li><p><strong>The Interrupt Descriptor Table.</strong> The processor
+ensures that interrupts and exceptions can only cause the kernel to be
+entered at a few specific, well-defined entry-points <em>determined by
+the kernel itself</em>, and not by the code running when the interrupt
+or exception is taken.</p>
+<p>The x86 allows up to 256 different interrupt or exception entry
+points into the kernel, each with a different <em>interrupt vector</em>.
+A vector is a number between 0 and 255. An interrupt's vector is
+determined by the source of the interrupt: different devices, error
+conditions, and application requests to the kernel generate interrupts
+with different vectors. The CPU uses the vector as an index into the
+processor's <em>interrupt descriptor table</em> (IDT), which the kernel
+sets up in kernel-private memory, much like the GDT. From the
+appropriate entry in this table the processor loads:</p>
+<ul>
+<li>the value to load into the instruction pointer (<code>EIP</code>)
+register, pointing to the kernel code designated to handle that type of
+exception.</li>
+<li>the value to load into the code segment (<code>CS</code>) register,
+which includes in bits 0-1 the privilege level at which the exception
+handler is to run. (In JOS, all exceptions are handled in kernel mode,
+privilege level 0.)</li>
+</ul></li>
+<li><p><strong>The Task State Segment.</strong> The processor needs a
+place to save the <em>old</em> processor state before the interrupt or
+exception occurred, such as the original values of <code>EIP</code> and
+<code>CS</code> before the processor invoked the exception handler, so
+that the exception handler can later restore that old state and resume
+the interrupted code from where it left off. But this save area for the
+old processor state must in turn be protected from unprivileged
+user-mode code; otherwise buggy or malicious user code could compromise
+the kernel.</p>
+<p>For this reason, when an x86 processor takes an interrupt or trap
+that causes a privilege level change from user to kernel mode, it also
+switches to a stack in the kernel's memory. A structure called the
+<em>task state segment</em> (TSS) specifies the segment selector and
+address where this stack lives. The processor pushes (on this new stack)
+<code>SS</code>, <code>ESP</code>, <code>EFLAGS</code>, <code>CS</code>,
+<code>EIP</code>, and an optional error code. Then it loads the
+<code>CS</code> and <code>EIP</code> from the interrupt descriptor, and
+sets the <code>ESP</code> and <code>SS</code> to refer to the new
+stack.</p>
+<p>Although the TSS is large and can potentially serve a variety of
+purposes, JOS only uses it to define the kernel stack that the processor
+should switch to when it transfers from user to kernel mode. Since
+"kernel mode" in JOS is privilege level 0 on the x86, the processor uses
+the <code>ESP0</code> and <code>SS0</code> fields of the TSS to define
+the kernel stack when entering kernel mode. JOS doesn't use any other
+TSS fields.</p></li>
+</ol>
+<h3 id="types-of-exceptions-and-interrupts">Types of Exceptions and
+Interrupts</h3>
+<hr />
+<p>All of the synchronous exceptions that the x86 processor can generate
+internally use interrupt vectors between 0 and 31, and therefore map to
+IDT entries 0-31. For example, a page fault always causes an exception
+through vector 14. Interrupt vectors greater than 31 are only used by
+<em>software interrupts</em>, which can be generated by the
+<code>int</code> instruction, or asynchronous <em>hardware
+interrupts</em>, caused by external devices when they need
+attention.</p>
+<h2 id="experiment">Experiment</h2>
+<hr />
+<h3 id="basic-work">Basic work</h3>
+<hr />
+<p>Just follow what we've done to handle <code>pages</code> array, and
+follow the instruction in comment.</p>
+<p><img src="../images/lab3/exec_1_0.png" /></p>
+<p>Here we allocate memories for this array to manage our
+environments.</p>
+<p><img src="../images/lab3/exec_1_1.png" /></p>
+<p>Finish the map follow the comment.</p>
+<h3 id="creating-and-running-environments">Creating and Running
+Environments</h3>
+<hr />
+<p>You will now write the code in <code>kern/env.c</code> necessary to
+run a user environment. Because we do not yet have a filesystem, we will
+set up the kernel to load a static binary image that is <em>embedded
+within the kernel itself</em>. JOS embeds this binary in the kernel as a
+ELF executable image.</p>
+<p>The Lab 3 <code>GNUmakefile</code> generates a number of binary
+images in the <code>obj/user/</code> directory. If you look at
+<code>kern/Makefrag</code>, you will notice some magic that "links"
+these binaries directly into the kernel executable as if they were
+<code>.o</code> files. The <code>-b binary</code> option on the linker
+command line causes these files to be linked in as "raw" uninterpreted
+binary files rather than as regular <code>.o</code> files produced by
+the compiler. (As far as the linker is concerned, these files do not
+have to be ELF images at all - they could be anything, such as text
+files or pictures!) If you look at <code>obj/kern/kernel.sym</code>
+after building the kernel, you will notice that the linker has
+"magically" produced a number of funny symbols with obscure names like
+<code>_binary_obj_user_hello_start</code>,
+<code>_binary_obj_user_hello_end</code>, and
+<code>_binary_obj_user_hello_size</code>. The linker generates these
+symbol names by mangling the file names of the binary files; the symbols
+provide the regular kernel code with a way to reference the embedded
+binary files.</p>
+<p>This is a really fancy trick to handle the situation we standing at
+that file system isn't established. In a word, this method extract the
+program we want to run, and using intermediate symbols to embed the
+program into kernel.</p>
+<p>Let's check out the function I've implemented.</p>
+<p><img src="../images/lab3/env_init.png" /></p>
+<p>Just the same as what we do in <code>lab2</code> about the
+initialization of page and corresponding link list, isn't it?</p>
+<p><img src="../images/lab3/env_setup_vm.png" /></p>
+<p>Every independent environment has its own "virtual memory index
+table", more specifically page directory. The process of setting up is
+similar to what we do in <code>lab2</code> in kernel, <strong>except
+for</strong> priority problem. The place lower then <code>UTOP</code> is
+vacant. And there is no need to call <code>page_alloc</code> again.
+<code>pp_ref</code> higher than <code>UTOP</code> don't have to
+maintain, because the only owner of it it's kernel <strong>except
+for</strong> <code>env_pgdir</code>.</p>
+<p><img src="../images/lab3/region_alloc.png" /></p>
+<p>This is how we allocate memory for user-mode environment.</p>
+<p><img src="../images/lab3/load_icode.png" /></p>
+<p>This is similar to what we've done in Lab 1: check out the format of
+<code>elf</code> and follow it. Step by step, we can find how to map
+from a binary file(in <code>elf</code> format) to user's virtual address
+space.</p>
+<p><img src="../images/lab3/env_create.png" /></p>
+<p>Here is our first environment.</p>
+<p><img src="../images/lab3/env_run.png" /></p>
+<p>Here is a context switch function from current environment to the
+appointed environment <code>e</code>.</p>
+<p>Here we can make a summary. Here is machine's "timeline":</p>
+<ul>
+<li><p>start (kern/entry.S)</p></li>
+<li><p>i386_init (kern/init.c)</p>
+<ul>
+<li>cons_init</li>
+<li>mem_init</li>
+<li>env_init</li>
+<li>trap_init(still incomplete at this point)</li>
+<li>env_create</li>
+<li>env_run
+<ul>
+<li>env_pop_tf</li>
+</ul></li>
+</ul></li>
+</ul>
+<h3 id="handling-interrupts-and-exceptions">Handling Interrupts and
+Exceptions</h3>
+<hr />
+<p>Our first job is to set up the IDT. We can read the information about
+the interrupts we need to set in <code>kern/trap.h</code>.</p>
+<p>Here we gonna trick macro to achieve this marvelous and exciting
+job.</p>
+<p>At first, we have a look at where IDT is defined.</p>
+<p><img src="../images/lab3/idt_pos.png" /></p>
+<p>It's a <code>struct Gatedesc</code> array.</p>
+<p>Let's have a look at my final job, maybe you will be the same
+confused about these macros as me, but we'll figure out later:</p>
+<p><img src="../images/lab3/trap_init.png" /></p>
+<p>This is what I've done in <code>trap_init</code>.</p>
+<p><img src="../images/lab3/use_macro2init.png" /></p>
+<p>And this corresponds to what I've done in <code>trap_init</code>,
+term by term. It's located at <code>kern/trapentry.S</code> .</p>
+<p><img src="../images/lab3/alltrap.png" /></p>
+<p>With in the same assemble source file, we've finish the last steps
+which is the preparatory work of calling trap as above.</p>
+<p>To understand what we are doing here, let's examine the macros we've
+used.</p>
+<p><img src="../images/lab3/macro4init.png" /></p>
+<p>In <code>kern/trapentry.S</code>, we will find this 2 macros. One is
+for the trap with error code, the other is for none. Combined with what
+I've done using this macros, it's easy to figure out that it defines
+trap handler for every specific trap and it's in a repeatable way. There
+are two parameters in these macros. One is for function name, the other
+is the number of the trap, which is also the index in IDT. Check out
+what we've done in <code>trap_init</code>, we declare a bunch of trap
+handler function but without the definition! These macros using this
+declaration and expand to special codes for each of them. This is
+exactly where we provide definition for those declaration. These macros
+tag each special code with the function's declaration using
+<code>.global</code>. It offers a symbol for connecting the declaration
+in <code>trap.c</code> and the definition in
+<code>trapentry.S</code>.</p>
+<p>If you look at these macros clearly enough, you will see it finally
+goes to the same destination: <code>_alltraps</code>.</p>
+<p><img src="../images/lab3/alltrap.png" /></p>
+<p>Why this? Look what <code>_alltraps</code> does in the end, it's
+exactly what its final purpose, calling <code>trap</code> function.</p>
+<p><img src="../images/lab3/func_trap.png" /></p>
+<p>Just focus on the parameter used in this function, it need
+<code>Trapframe</code> pointer. As mentioned in preliminary knowledge,
+when an x86 processor takes an interrupt or trap that causes a privilege
+level change from user to kernel mode, it also switches to a stack in
+the kernel's memory. A structure called the <em>task state segment</em>
+(TSS) specifies the segment selector and address where this stack lives.
+The processor pushes (on this new stack) <code>SS</code>,
+<code>ESP</code>, <code>EFLAGS</code>, <code>CS</code>,
+<code>EIP</code>, and an optional error code. Then it loads the
+<code>CS</code> and <code>EIP</code> from the interrupt descriptor, and
+sets the <code>ESP</code> and <code>SS</code> to refer to the new stack.
+It's naturally to design this mechanism to record the current context
+into the kernel' stack which is used for recover the context of current
+environment later. So it just push every field in <code>Trapframe</code>
+follow the inverse order. Some were pushed by machine, some were pushed
+by those 2 macros, the rest part need to be done in
+<code>_alltraps</code> by ourselves.</p>
+<p>Last question, what is <code>SETGATE</code> used in
+<code>trap.c</code>?</p>
+<p><img src="../images/lab3/SETGATE.png" /></p>
+<p>Ah hah, it's a tool macro help us to set up the entry in IDT with
+strict format.</p>
+<h3 id="handling-page-faults-and-the-breakpoint-exception">Handling Page
+Faults and The Breakpoint Exception</h3>
+<hr />
+<p>Since we've set up our IDT, the next question is how to use them?</p>
+<p><img src="../images/lab3/func_trap.png" /></p>
+<p>After we track what this function did, we can naturally find
+<code>trap_dispatch</code> is</p>
+<p>suspicious.</p>
+<p><img src="../images/lab3/trap_dispatch.png" /></p>
+<p>Consider the comment, now we figure out what is this functions
+purpose: handle different trap indexed by there interruption number. So,
+I just use switch case to handle different situation. Attention about
+<code>T_BRKPT</code> here. It's really important to be careful about the
+privilege problem, formally its called <strong>DPL(descriptor privilege
+level)</strong>.</p>
+<p><img src="../images/lab3/trap_init.png" /></p>
+<p>It's level is set as 3 which represent user level. When exception
+occur, it requires the CPL and RPL of current environment is not bigger
+than DPL of the exception. It's a protection that prevent low privilege
+level code to share high level privilege.</p>
+<h3 id="system-calls">System Calls</h3>
+<hr />
+<p>We use functions such as <code>printf</code> naturally in C
+programming. And we take it for granted. But if we think about what
+happen under the phenomenon. Things get interesting.</p>
+<p>There are some actions we have to achieve it with the help of
+operating system. Such as modify or read some data on the device and
+etc. In the case of <code>printf</code>, we perform some action on the
+terminal, which is regarded as a file in UNIX. All these help we get
+from operating system is requested by system calls.</p>
+<p>User processes ask the kernel to do things for them by invoking
+system calls. When the user process invokes a system call, the processor
+enters kernel mode, the processor and the kernel cooperate to save the
+user process's state, the kernel executes appropriate code in order to
+carry out the system call, and then resumes the user process. The exact
+details of how the user process gets the kernel's attention and how it
+specifies which call it wants to execute vary from system to system.</p>
+<p>In the JOS kernel, we will use the <code>int</code> instruction,
+which causes a processor interrupt. In particular, we will use <code>int
+$0x30</code> as the system call interrupt. We have defined the constant
+<code>T_SYSCALL</code> to 48 (0x30) for us. We will have to set up the
+interrupt descriptor to allow user processes to cause that interrupt.
+Note that interrupt 0x30 cannot be generated by hardware, so there is no
+ambiguity caused by allowing user code to generate it.</p>
+<p>If we check about <code>inc/syscall.c</code></p>
+<p><img src="../images/lab3/inc_syscall.png" /></p>
+<p>This function use the technique of inline assemble. We can write
+assemble language in C programming. In <code>asm volatile...</code>
+part, we can check those registers meaning.</p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token keyword">asm</span> <span class="token keyword">volatile</span><span class="token punctuation">(</span><span class="token string">"int %1\n"</span>      <span class="token comment">// num</span>
+         <span class="token operator">:</span> <span class="token string">"=a"</span> <span class="token punctuation">(</span>ret<span class="token punctuation">)</span>        <span class="token comment">// return value store at eax and set to ret</span>
+         <span class="token operator">:</span> <span class="token string">"i"</span> <span class="token punctuation">(</span>T_SYSCALL<span class="token punctuation">)</span><span class="token punctuation">,</span>  <span class="token comment">// random</span>
+           <span class="token string">"a"</span> <span class="token punctuation">(</span>num<span class="token punctuation">)</span><span class="token punctuation">,</span>        <span class="token comment">// syscall number to eax</span>
+           <span class="token string">"d"</span> <span class="token punctuation">(</span>a1<span class="token punctuation">)</span><span class="token punctuation">,</span>         <span class="token comment">// 1st parameter edx</span>
+           <span class="token string">"c"</span> <span class="token punctuation">(</span>a2<span class="token punctuation">)</span><span class="token punctuation">,</span>         <span class="token comment">// 2nc parameter ecx</span>
+           <span class="token string">"b"</span> <span class="token punctuation">(</span>a3<span class="token punctuation">)</span><span class="token punctuation">,</span>         <span class="token comment">// 3rd parameter ebx</span>
+           <span class="token string">"D"</span> <span class="token punctuation">(</span>a4<span class="token punctuation">)</span><span class="token punctuation">,</span>         <span class="token comment">// 4th parameter edi</span>
+           <span class="token string">"S"</span> <span class="token punctuation">(</span>a5<span class="token punctuation">)</span>          <span class="token comment">// 5th parameter esi</span>
+         <span class="token operator">:</span> <span class="token string">"cc"</span><span class="token punctuation">,</span> <span class="token string">"memory"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>	 <span class="token comment">// if necessary, change condition registers and memroy</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>So, what we need to do in our code is offer a wrapper.</p>
+<p><img src="../images/lab3/kern_syscall.png" /></p>
+<p>And <code>syscall</code> is essentially a trap. So in
+<code>trap_dispatch</code>, we can add corresponding term for it.</p>
+<p><img src="../images/lab3/trap_dispatch4syscall.png" /></p>
+<p>Attention for the order of parameter.</p>
+<h3 id="user-mode-start-up">User-mode start-up</h3>
+<hr />
+<p>A user program starts running at the top of <code>lib/entry.S</code>.
+After some setup, this code calls <code>libmain()</code>, in
+<code>lib/libmain.c</code>. <code>libmain()</code> then calls
+<code>umain</code>, which, in the case of the hello program, is in
+<code>user/hello.c</code>. Note that after printing "<code>hello,
+world</code>", it tries to access <code>thisenv-&gt;env_id</code>.
+<code>libmain()</code> need to initialize the global pointer
+<code>thisenv</code> to point at the environment's <code>struct
+Env</code> in the <code>envs[]</code> array we've allocated before.
+However, how to get it?</p>
+<p>Check the definition about the type of <code>env_id</code> , lower
+ten bits(0-9) offer our the index in <code>envs[]</code> array! And we
+can use macro to help us extract that index.</p>
+<p><img src="../images/lab3/libmain.png" /></p>
+<h3 id="page-faults-and-memory-protection">Page faults and memory
+protection</h3>
+<hr />
+<p>Memory protection is a crucial feature of an operating system,
+ensuring that bugs in one program cannot corrupt other programs or
+corrupt the operating system itself.</p>
+<p>Operating systems usually rely on hardware support to implement
+memory protection. The OS keeps the hardware informed about which
+virtual addresses are valid and which are not. When a program tries to
+access an invalid address or one for which it has no permissions, the
+processor stops the program at the instruction causing the fault and
+then traps into the kernel with information about the attempted
+operation. If the fault is fixable, the kernel can fix it and let the
+program continue running. If the fault is not fixable, then the program
+cannot continue, since it will never get past the instruction causing
+the fault.</p>
+<p>As an example of a fixable fault, consider an automatically extended
+stack. In many systems the kernel initially allocates a single stack
+page, and then if a program faults accessing pages further down the
+stack, the kernel will allocate those pages automatically and let the
+program continue. By doing this, the kernel only allocates as much stack
+memory as the program needs, but the program can work under the illusion
+that it has an arbitrarily large stack.</p>
+<p>System calls present an interesting problem for memory protection.
+Most system call interfaces let user programs pass pointers to the
+kernel. These pointers point at user buffers to be read or written. The
+kernel then dereferences these pointers while carrying out the system
+call. There are two problems with this:</p>
+<ol type="1">
+<li>A page fault in the kernel is potentially a lot more serious than a
+page fault in a user program. If the kernel page-faults while
+manipulating its own data structures, that's a kernel bug, and the fault
+handler should panic the kernel (and hence the whole system). But when
+the kernel is dereferencing pointers given to it by the user program, it
+needs a way to remember that any page faults these dereferences cause
+are actually on behalf of the user program.</li>
+<li>The kernel typically has more memory permissions than the user
+program. The user program might pass a pointer to a system call that
+points to memory that the kernel can read or write but that the program
+cannot. The kernel must be careful not to be tricked into dereferencing
+such a pointer, since that might reveal private information or destroy
+the integrity of the kernel.</li>
+</ol>
+<p>In <code>page_fault_handler</code>, we have to check about the mode
+of current environment. How to get the knowledge about that? Actually,
+low 2 bits of CS segment selector are used to store the privilege level.
+0 for kernel, 3 for user. What we add in <code>page_fault_handler</code>
+shown as below.</p>
+<p><img src="../images/lab3/page_fault_handler.png" /></p>
+<p>And we need to check where the access to memory is legal or not.</p>
+<p><img src="../images/lab3/user_mem_assert.png" /></p>
+<p>It lead us to check <code>user_mem_check</code>.</p>
+<p><img src="../images/lab3/user_mem_check.png" /></p>
+<p>Here is my implementation. It's quite simple. A user program can
+access a virtual address has two condition:</p>
+<ul>
+<li>The address is below ULIM</li>
+<li>The page table gives it permission</li>
+</ul>
+<p>We just check about the address from the beginning to the end.</p>
+<h2 id="misc">MISC</h2>
+<hr />
+<p>This is my final result of this lab</p>
+<p><img src="../images/lab3/grade.png" /></p>
+<p>And attention here, maybe I should put his at the very front of my
+post, before you <code>make grade</code>, there are some
+<code>panic</code> function in the original code must be deleted. I
+guess its for getting rid of some big trouble. But it really troubled me
+until I find out these "guardian".</p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        Author:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Tom.Eureka.Newton</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        Link:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://newtonvan.github.io/2021/mit-6-828-lab3.html">https://newtonvan.github.io/2021/mit-6-828-lab3.html</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        Reprint policy:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    All articles in this blog are used except for special statements
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    reprint polocy. If reproduced, please indicate source
+                    <a href="/about" target="_blank">Tom.Eureka.Newton</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>Copied successfully, please follow the reprint policy of this article</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">more</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/6-828/">
+                                    <span class="chip bg-color">6.828</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+            <div class="card">
+                <a href="/2022/elegant-interaction-with-server-git-solution.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="Elegant interaction with server: Git solution">
+                        
+                        <span class="card-title">Elegant interaction with server: Git solution</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-01-15
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Tricks/" class="post-category">
+                                    Tricks
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/mit-6-828-lab2.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="MIT 6.828 Lab2">
+                        
+                        <span class="card-title">MIT 6.828 Lab2</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-31
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/OS/" class="post-category">
+                                    OS
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/6-828/">
+                        <span class="chip bg-color">6.828</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + 'From: IdiotNe<br />'
+            + 'Author: Tom.Eureka.Newton<br />'
+            + 'Link: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;TOC</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+<!--  -->
+
+
+
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script>
+    MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']]
+        }
+    };
+</script>
+
+
+    <footer class="page-footer bg-color">
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2019-2022</span>
+            
+            <span id="year">2019</span>
+            <a href="/about" target="_blank">Tom.Eureka.Newton</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">23.9k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/NewtonVan" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:tomeurekanewton@gmail.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=2655410807" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 2655410807" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;Search</span>
+            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+	
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    
+
+</body>
+
+</html>
